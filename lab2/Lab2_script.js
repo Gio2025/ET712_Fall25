@@ -101,6 +101,37 @@ switch(gender){
         console.log("ERROR: unable to read the selected gender")
 }
 
+console.log("\n-----  EXERCISE 1   -----")
+
+let value = prompt("Enter a value (string or number):")
+let numValue = Number(value)
+if (!isNaN(numValue)) {
+    if (numValue > 0) {
+        console.log(`${numValue} is a positive number.`)
+    } else if (numValue < 0) {
+        console.log(`${numValue} is a negative number.`)
+    } else {
+        console.log(`The number is zero.`)
+    }
+} else {
+    console.log(`${value} is a string.`)
+}
+console.log("\n-----  EXERCISE 2   -----")
+
+let colors = ["red", "green", "orange", "olive", "magenta"]
+let userColor = prompt("Enter a color:").toLowerCase()
+switch(userColor) {
+    case "red":
+    case "green":
+    case "orange":
+    case "olive":
+    case "magenta":
+        console.log(`You selected ${userColor} color.`)
+        break
+    default:
+        console.log("Color is not in the list!")
+}
+
 
 
 
