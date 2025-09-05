@@ -112,3 +112,46 @@ while(true){
                 console.log("Thank you for visiting QCC bank!")
         }
         }
+
+console.log(`\n----- EXERCISE A -----`)
+console.log(`\n----- Exercise a: Sum Positive and Negative Numbers -----`)
+
+let num = [-3, 10, 0, 8, -9, 5, -2, 8, 6, -1]
+let positive_sum = 0
+let negative_sum = 0
+
+for(let i = 0; i < num.length; i++){
+    if(num[i] > 0){
+        positive_sum += num[i]
+    }
+    else if(num[i] < 0){
+        negative_sum += num[i]
+    }
+}
+
+console.log(`Sum of all negative numbers = ${negative_sum}`)
+console.log(`Sum of all positive numbers = ${positive_sum}`)
+
+console.log(`\n----- EXERCISE B -----`)
+
+let PIN = 1234
+let attempt = 1
+
+while(attempt <= 3){
+    let user_pin = parseInt(prompt("Enter your 4-digit PIN number"))
+    if(user_pin === PIN){
+        console.log("Your pin number is correct")
+        break
+    }
+    else{
+        console.log("Incorrect PIN")
+    }
+
+    if(attempt === 3){
+        console.log("Account is locked!")
+    }
+
+    attempt++
+}
+
+
