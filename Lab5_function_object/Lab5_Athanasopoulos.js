@@ -104,6 +104,53 @@ function yell(message=""){
 }
     }
 
+// LAB EXERCISE 1
+// Create an object mycalculator with 2 properties and 2 methods
+
+const mycalculator = {
+    
+    message: "This is a calculator for square and cube",
+    side: 2,
+
+    
+    area_square: function(){
+        return Math.pow(this.side, 2)
+    },
+
+    
+    volume_cube: function(){
+        return Math.pow(this.side, 3)
+    }
+}
+
+
+console.log("----- Lab Exercise 1: mycalculator -----")
+console.log(mycalculator.message)
+console.log(`Area of square = ${mycalculator.area_square()}`)
+console.log(`Volume of cube = ${mycalculator.volume_cube()}`)
+
+// LAB EXERCISE 2
+// Function to safely access an object's property
+
+function readProperty(obj, prop){
+    try {
+        return obj[prop]
+    } catch(error){
+        return "Error accessing property"
+    }
+}
+
+
+console.log("----- Lab Exercise 2: readProperty -----")
+
+let student = {
+    name: "George",
+    age: 22
+}
+
+console.log(readProperty(student, "name"))       
+console.log(readProperty(null, "name"))          
+console.log(readProperty(undefined, "age"))      
 
 
 
