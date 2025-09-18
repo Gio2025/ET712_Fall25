@@ -1,0 +1,191 @@
+*{box-sizing: border-box; margin: 0%;}
+html{scroll-behavior: smooth;}
+img{width: 100%; display: block;}
+body{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+/* HEADER */
+header{
+    background-color: rgb(0, 48, 109);
+}
+.top_header{
+    
+    display: flex;
+    justify-content: center;
+}
+.top_header div{
+    
+    width: 32%;
+    padding: 1%;
+}
+.nav_header{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav_header a{
+    display: inline-block;
+    width: 25%;
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    border-right: solid white 2px;
+}   
+.nav_header a:hover{
+    color: orange;
+}
+.bottom_header{
+    background-color: whitesmoke;
+}
+.nav_bottom_header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    
+}
+.nav_bottom_header a{
+    display: inline-block;
+    width: 20%;
+    padding: 2%;
+    color: rgb(0, 48, 109);
+    text-decoration: none;
+}
+.nav_bottom_header a:hover{
+    text-decoration: underline;
+    font-size: 1.05em;
+    
+}
+/* MAIN */
+.intro_img{
+    position: relative;
+}
+.intro_p{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: white;
+    font-size: 3em;
+    background-color: rgba(20, 20, 20, 0.8 );
+    padding: 0.5em;
+}
+
+/* INFO CARDS */
+.info_cards{
+    background-color: aliceblue;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.card{
+    width: 300px;
+    border: solid gray 1px;
+    height: 400px;
+    background-color: white;
+    margin: 100px 20px 100px 0px;
+    
+}
+.card_img{
+    height: 50%;
+}
+.card_content{
+    padding: 1em;
+
+}
+.card_title{
+    color: rgb(0, 48, 109);
+}
+.card_link{
+    color: rgb(0, 48, 109);
+    text-decoration: none;
+}
+.card_paragraph{
+    padding-top: 1em;
+}
+.card_link:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+.card_quicklink{
+    width: 450px;
+    margin: 100px 50px 50px 0px;
+}
+.quicklink{
+    display: block;
+    border: 2px orange solid;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 50px;
+    margin-top: 20px;    
+    border-radius: 10px;
+    color: rgb(0, 48, 109);
+}
+.quicklink:hover{
+    background-color: rgb(30, 30, 50);
+    color: white;
+    border: 2px gray solid;
+}
+.section_title{
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    color: rgb(0, 48, 109);
+    font-size: 3em;
+
+}
+.cards2{
+    background-color: white;
+}
+
+/* FOOTER - CONTACT */
+footer{
+    background-color: rgb(30,30, 50);
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+
+}
+.footer_left, .footer_center, .footer_right{
+    width: 500px;
+    
+}
+.footer_left, .footer_center, .footer_right{
+color: white;
+display: block;
+text-decoration: none;
+padding-top: 20px;
+}
+.footer_left a, .footer_center a, .footer_right a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 15px;
+
+}
+.footer_left a:hover, .footer_center a:hover, .footer_right a:hover{
+    color: orange;
+}
+.social_media{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.social_media a{
+    display: block;
+    width: 13%;
+    margin-right: 20px;
+    opacity: 0.6;
+    transition: ease-in-out 300ms;
+}
+.social_media a:hover{
+    opacity: 1;
+}
+.copyright{
+    width: 100%;
+    color: orange;
+    text-align: center;
+    margin-top: 50px;
+}
