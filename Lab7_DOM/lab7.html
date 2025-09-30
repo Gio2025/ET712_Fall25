@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 by George Athanasopoulos</title>
+    <link rel="stylesheet" href="lab7_styles.css">
+
+</head>
+<body>
+    <h1>Lab 7 by George Athanasopoulos</h1>
+ 
+
+    <h1 id="title">Accessing Elements</h1>
+    <p class="description">Traditional methods to access elements:</p>
+    <ul class="traditionalMethods">
+        <li class="method">getElementById</li>
+        <li class="method">getElementByClassName</li>
+        <li class="method">getElementByTagName</li>
+    </ul>
+    <p class="description">Most recent methods to access elements:</p>
+    <u class="recentMethods">
+        <li class="method">querySelector</li>
+        <li class="method">querySelectorAll</li>
+    </ul>
+
+    <section class="shapeContainer">
+        <div class="shapeDivision">Select the shape</div>
+        <button class="btn_square">SQUARE</button>
+        <button class="btn_circle">CIRCLE</button>
+        <button class="btn_rectangle">RECTANGLE</button>
+    </section>
+
+    <h1>Inline Event</h1>
+    <button onclick="alert('You Clicked')">CLICK HERE</button>
+    <h1>Traditional Event Handler</h1>
+    <button class="btnpress">SHOW THE DATE</button>
+    <h1>Mouse Events</h1>
+    <div class="circle x"></div>
+    <p class="circle_paragraph"></p>
+
+    <h1>EVENT LISTENER</h1>
+    <div class="rectangle box_color"></div>
+
+    <h1>KEY EVENT</h1>
+    <label for="username">Username: </label>
+    <input type="text" class="inputtext" id="username">
+    <p class="username_paragraph"></p>
+
+    <h1>EXERICSE</h1>
+<main class="container">
+        <section class="s1">
+            <p class="ps1">Welcome to DOM styling</p>
+            <p class="ps2">Try to change the font-size to 25px</p>
+        </section>
+        <section class="s2">
+            <div class="divs2"></div>
+            <input class="divs3" type="text"></input>
+        </section>
+</main>
+
+
+
+
+    <script src="lab7_scripts.js"></script>
+</body>
+</html>
