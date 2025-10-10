@@ -79,3 +79,39 @@ img{width: 100%; display: block;}
 .btnright{
     right: 0%;
 }
+
+
+/*LAB 8 EXERCISE*/
+
+/*CLICK COUNTER CIRCLE*/
+.circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: darkblue;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    cursor: pointer;
+   
+}
+.circle:hover{
+    background-color: crimson;
+}
+.resetBtn{
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 1.5em;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.resetBtn:hover{
+background-color: darkred;
+}

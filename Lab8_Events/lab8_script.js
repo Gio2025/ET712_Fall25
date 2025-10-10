@@ -58,3 +58,18 @@ btnright.addEventListener("click", function(){
 btnleft.addEventListener("click", function(){
     scrollGallery(-500)
 })
+
+
+//LAB 8 EXERCISE
+let circle = document.querySelector(".circle")
+let resetBtn = document.querySelector(".resetBtn")
+let count = 0
+
+circle.addEventListener("click",function(){
+    count++
+    circle.textContent = count
+})
+resetBtn.addEventListener("click", function(){
+    count = 0
+    circle.textContent = count
+})
