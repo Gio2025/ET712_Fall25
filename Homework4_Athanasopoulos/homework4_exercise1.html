@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homework 4 by George Athanasopoulos</title>
+    <link rel="stylesheet" href="homework4_style.css" />
+</head>
+<body>
+    <h1>Homework 4 by George Athanasopoulos</h1>
+
+    <form class="myform" id="userForm" action="formsuccess.html" method="GET" novalidate>
+        <legend class="legend">User Registration</legend>
+
+        <section class="formcontrol">
+            <label class="form_label" for="fullname">Full Name</label>
+            <input
+                class="form_input"
+                type="text"
+                id="fullname"
+                maxlength="50"
+                placeholder="Enter your full name"
+            />
+            <p class="error_msg" id="fullname_error"></p>
+        </section>
+
+        <section class="formcontrol">
+            <label class="form_label" for="email">Email Address</label>
+            <input
+                class="form_input"
+                type="text"
+                id="email"
+                placeholder="example@example.com"
+            />
+            <p class="error_msg" id="email_error"></p>
+        </section>
+
+        <section class="formcontrol">
+            <label class="form_label" for="password">Password</label>
+            <input
+                class="form_input"
+                type="password"
+                id="password"
+                placeholder="At least 5 chars and #, $, or %"
+            />
+            <p class="error_msg" id="password_error"></p>
+        </section>
+
+        <input type="submit" value="SUBMIT" class="btnsubmit" id="btnsubmit" />
+    </form>
+
+    <div class="success_msg" id="success_msg" style="display:none; margin-top: 1rem; color: green; font-weight: 700;">
+        Success! All fields are valid.
+    </div>
+
+    <script src="homework4_exercise1_script.js"></script>
+</body>
+</html>

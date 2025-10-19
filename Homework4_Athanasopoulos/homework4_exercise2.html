@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Card Gallery with Learn More</title>
+  <link rel="stylesheet" href="homework4_exercise2_style.css" />
+</head>
+<body>
+
+  <h1>Homework 4 Gallery by George Athanasopoulos</h1>
+
+  <div class="gallery-wrapper">
+    <button id="btnLeft" class="nav-btn">&lt;</button>
+
+    <div class="gallery-container">
+      <div class="cards">
+
+        <!-- Card 1 -->
+        <div class="card" data-title="Forest in Fall" data-extra="A beautiful forest scene showcasing vibrant fall foliage with colorful leaves.">
+          <img src="images/cardimage1.jpg" alt="Forest in the Fall" />
+          <h3>Forest in Fall</h3>
+          <p>A stunning autumn forest filled with golden leaves.</p>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-title="Sailboat on Water" data-extra="A serene sailboat drifting peacefully on clear blue waters with an island visible in the distance.">
+          <img src="images/cardimage2.jpg" alt="Sailboat on Water" />
+          <h3>Sailboat on Water</h3>
+          <p>A calm sailboat floating with island views behind.</p>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-title="Wooden House on Mountainside" data-extra="A cozy wooden house perched on a mountainside, blending naturally with the surrounding landscape.">
+          <img src="images/cardimage3.jpg" alt="Wooden House on Mountainside" />
+          <h3>Wooden House on Mountainside</h3>
+          <p>A charming cabin nestled in the mountains.</p>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" data-title="Candle in One Hand" data-extra="A small candle gently held in one hand, symbolizing warmth and hope.">
+          <img src="images/cardimage4.jpg" alt="Candle in One Hand" />
+          <h3>Candle in One Hand</h3>
+          <p>A small glowing candle being held softly.</p>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" data-title="Candle in Two Hands" data-extra="A candle carefully held in two hands, radiating light and comfort.">
+          <img src="images/cardimage5.jpg" alt="Candle in Two Hands" />
+          <h3>Candle in Two Hands</h3>
+          <p>A candle held securely with both hands.</p>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" data-title="Candles with Flower Petals" data-extra="A serene arrangement of candles on the floor surrounded by delicate flower petals, creating a peaceful atmosphere.">
+          <img src="images/cardimage6.jpg" alt="Candles with Flower Petals" />
+          <h3>Candles with Flower Petals</h3>
+          <p>Candles surrounded by flowers on the ground.</p>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+
+      </div>
+    </div>
+
+    <button id="btnRight" class="nav-btn">&gt;</button>
+  </div>
+
+  <!-- Info Panel to show Learn More content -->
+  <div id="info-panel" class="info-panel" style="display:none;">
+    <h2 id="info-title"></h2>
+    <p id="info-text"></p>
+  </div>
+
+  <script src="homework4_exercise2_script.js"></script>
+</body>
+</html>
