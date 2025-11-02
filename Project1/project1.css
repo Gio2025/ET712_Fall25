@@ -1,0 +1,190 @@
+body {
+  background-color: rgb(235, 93, 105);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+p { font-size: large; }
+
+#mainImage {
+  width: 80%;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+button {
+  background-color: lightgrey;
+  border-radius: 15px;
+  color: crimson;
+  margin: 10px 10px;
+  padding: 10px;
+  width: 100px;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgrey;
+  transform: scale(1.1);
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.topic-section {
+  display: none;
+  border: solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ---------- COLORS TOPIC ------------*/
+#colorsTopic button:hover { transform: scale(1.1); }
+.red:hover { background-color: red; color: white; }
+.blue:hover { background-color: blue; color: white; }
+.green:hover { background-color: green; color: white; }
+.yellow:hover { background-color: yellow; color: black; }
+.orange:hover { background-color: orange; color: white; }
+.purple:hover { background-color: purple; color: white; }
+.pink:hover { background-color: pink; color: black; }
+.brown:hover { background-color: brown; color: white; }
+.black:hover { background-color: black; color: white; }
+.white:hover { background-color: white; color: black; border: 1px solid grey; }
+
+/* ---------- SCROLL BUTTONS ------------*/
+.scrollBtn {
+  position: fixed;
+  width: auto;
+  right: 10px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: lightgrey;
+  color: red;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0.9;
+}
+
+.scrollBtn:hover {
+  background-color: pink;
+  transform: scale(1.1);
+}
+
+#scrollTopBtn { bottom: 100px; }
+#scrollBottomBtn { bottom: 20px; }
+
+/* ---------- ANIMAL MODAL ------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  padding-top: 80px;
+}
+
+.modal img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+.modal p {
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- SHAPES TOPIC ------------*/
+.shape-btn.active {
+  background-color: purple;
+  color: white;
+  transform: scale(1.1);
+}
+
+#shapeDisplay {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#shapeDisplay img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  border: 3px solid purple;
+  margin: 10px;
+  padding: 30px;
+}
+
+#shapeDisplay p {
+  font-size: 20px;
+  color: purple;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ---------- ALPHABET TOPIC ------------*/
+#alphabetButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.letter {
+  background-color: lightblue;
+  color: darkblue;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.letter:hover {
+  background-color: skyblue;
+  transform: scale(1.1);
+}
+
+#alphabetDisplay {
+  margin-top: 20px;
+}
+
+#description{
+  font-size: 25px;
+}
+.header{
+  border: solid 3px black;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: large;
+  
+
+}

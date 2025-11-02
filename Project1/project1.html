@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-K Learning</title>
+  <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+<div class="container">
+  <div class="header"><h1>Welcome to Pre-K!</h1></div>
+  <img id="mainImage" src="images/pre-k.jpg" alt="pre-k classroom" />
+  <p id="description">
+    Hello, friends!   
+    In Pre-K, we’ll learn fun things like <b>colors</b>, <b>the alphabet</b>, <b>animals</b>, and <b>shapes</b>! Click on the buttons below to learn a little about each topic.
+  </p>
+
+  <div class="buttons">
+    <button id="colorsbtn">Colors</button>
+    <button id="alphabetbtn">Alphabet</button>
+    <button id="animalsbtn">Animals</button>
+    <button id="shapesbtn">Shapes</button>
+  </div>
+
+  <!-- COLORS TOPIC -->
+  <div id="colorsTopic" class="topic-section">
+    <h2>Let's Learn Colors!</h2>
+    <h3>Hover over each button to see its color!</h3>
+    <button class="red">Red</button> 
+    <button class="blue">Blue</button>
+    <button class="green">Green</button>
+    <button class="yellow">Yellow</button>
+    <button class="orange">Orange</button>
+    <button class="purple">Purple</button>
+    <button class="pink">Pink</button>
+    <button class="brown">Brown</button>
+    <button class="black">Black</button>
+    <button class="white">White</button>
+  </div>
+
+  <!-- ALPHABET TOPIC -->
+  <div id="alphabetTopic" class="topic-section">
+    <h2>Let's Learn the Alphabet!</h2>
+    <p>Click a letter to see what word it stands for!</p>
+
+    <div id="alphabetButtons">
+      <!-- Buttons for A–Z -->
+      <button class="letter">A</button>
+      <button class="letter">B</button>
+      <button class="letter">C</button>
+      <button class="letter">D</button>
+      <button class="letter">E</button>
+      <button class="letter">F</button>
+      <button class="letter">G</button>
+      <button class="letter">H</button>
+      <button class="letter">I</button>
+      <button class="letter">J</button>
+      <button class="letter">K</button>
+      <button class="letter">L</button>
+      <button class="letter">M</button>
+      <button class="letter">N</button>
+      <button class="letter">O</button>
+      <button class="letter">P</button>
+      <button class="letter">Q</button>
+      <button class="letter">R</button>
+      <button class="letter">S</button>
+      <button class="letter">T</button>
+      <button class="letter">U</button>
+      <button class="letter">V</button>
+      <button class="letter">W</button>
+      <button class="letter">X</button>
+      <button class="letter">Y</button>
+      <button class="letter">Z</button>
+    </div>
+
+    <div id="alphabetDisplay">
+      <p id="letterWord" style="font-size: 1.5em; color: purple; font-weight: bold;"></p>
+    </div>
+  </div>
+
+  <!-- ANIMALS TOPIC -->
+  <div id="animalsTopic" class="topic-section">
+    <h2>Let's Learn Animals!</h2>
+    <p>Click an animal to see its picture!</p>
+    <button>Dog</button>
+    <button>Cat</button>
+    <button>Elephant</button>
+    <button>Lion</button>
+    <button>Tiger</button>
+    <button>Monkey</button>
+    <button>Giraffe</button>
+    <button>Zebra</button>
+    <button>Frog</button>
+    <button>Rabbit</button>
+  </div>
+
+  <!-- SHAPES TOPIC -->
+  <div id="shapesTopic" class="topic-section">
+    <h2>Let's Learn Shapes!</h2>
+    <p>Click on a shape to see its picture!</p>
+    <button class="shape-btn">Circle</button>
+    <button class="shape-btn">Square</button>
+    <button class="shape-btn">Triangle</button>
+    <button class="shape-btn">Rectangle</button>
+    <button class="shape-btn">Oval</button>
+    <button class="shape-btn">Star</button>
+    <button class="shape-btn">Heart</button>
+    <button class="shape-btn">Diamond</button>
+    <button class="shape-btn">Pentagon</button>
+    <button class="shape-btn">Hexagon</button>
+
+    <div id="shapeDisplay">
+      <img id="shapeImg" src="" alt="Shape Image">
+      <p id="shapeDesc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Scroll Buttons -->
+<button id="scrollTopBtn" class="scrollBtn">⬆️</button>
+<button id="scrollBottomBtn" class="scrollBtn">⬇️</button>
+
+<!-- Animal Modal -->
+<div id="animalModal" class="modal">
+  <span class="close">&times;</span>
+  <img id="animalImg" src="" alt="Animal Image">
+  <p id="animalDesc"></p>
+</div>
+
+<script src="project1.js"></script>
+</body>
+</html>
