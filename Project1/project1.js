@@ -123,7 +123,7 @@ for (let btn of shapeButtons) {
     shapeImg.src = shapePath;
     shapeDesc.textContent = "This is a " + shape + "!";
 
-    // ✅ Smooth scroll to show shape image and text
+    //  Smooth scroll to show shape image and text
     document.getElementById("shapeDisplay").scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
@@ -131,4 +131,21 @@ for (let btn of shapeButtons) {
 // --------------------- WELCOME ---------------------
 window.addEventListener("load", function() {
   alert("Welcome to Pre-K! Let's start learning and having fun!");
+});
+// --------------------- BACKGROUND COLOR ON SCROLL ---------------------
+window.addEventListener("scroll", () => {
+  // Get scroll position
+  const scrollY = window.scrollY;
+
+  // Change background color gradually based on scroll
+  // Example: from light pink to crimson
+  if (scrollY < 200) {
+    document.body.style.backgroundColor = "rgb(235, 93, 105)"; // default
+  } else if (scrollY >= 200 && scrollY < 400) {
+    document.body.style.backgroundColor = "rgb(220, 50, 75)";
+  } else if (scrollY >= 400 && scrollY < 600) {
+    document.body.style.backgroundColor = "rgb(200, 20, 50)";
+  } else {
+    document.body.style.backgroundColor = "crimson";
+  }
 });

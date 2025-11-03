@@ -1,29 +1,59 @@
+/* ---------- GENERAL STYLES ---------- */
 body {
   background-color: rgb(235, 93, 105);
   margin: 0;
   padding: 0;
   text-align: center;
   color: #333;
+  font-family: 'Comic Sans MS', sans-serif;
+  transition: background-color 0.5s ease;
 }
 
-p { font-size: large; }
+p {
+  font-size: 1.1em;
+}
 
+.container {
+  width: 90%;              /* make it flexible */
+  max-width: 800px;        /* don’t let it get too wide */
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  border: solid 3px black;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+/* ---------- MAIN IMAGE ---------- */
 #mainImage {
-  width: 80%;
+  width: 100%;        /* full width of container */
+  height: auto;       /* keeps image proportion */
   border-radius: 15px;
   margin: 20px 0;
 }
 
+/* ---------- BUTTONS ---------- */
 button {
   background-color: lightgrey;
   border-radius: 15px;
   color: crimson;
-  margin: 10px 10px;
+  margin: 8px;
   padding: 10px;
-  width: 100px;
-  font-size: large;
+  width: 30%;          /* flexible width */
+  min-width: 100px;    /* won’t get too small */
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
@@ -31,15 +61,14 @@ button:hover {
   transform: scale(1.1);
 }
 
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  background-color: white;
-  border-radius: 25px;
-  padding: 30px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+/* Arrange buttons nicely and allow wrapping */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* ---------- TOPIC SECTIONS ---------- */
 .topic-section {
   display: none;
   border: solid black;
@@ -49,7 +78,6 @@ button:hover {
 }
 
 /* ---------- COLORS TOPIC ------------*/
-#colorsTopic button:hover { transform: scale(1.1); }
 .red:hover { background-color: red; color: white; }
 .blue:hover { background-color: blue; color: white; }
 .green:hover { background-color: green; color: white; }
@@ -64,19 +92,23 @@ button:hover {
 /* ---------- SCROLL BUTTONS ------------*/
 .scrollBtn {
   position: fixed;
-  width: auto;
-  right: 10px;
-  padding: 10px 15px;
-  font-size: 18px;
+  right: 10px;              /* stay close to right edge */
+  width: 40px;              /* small, even square */
+  height: 40px;
+  padding: 0;               /* no extra padding */
+  font-size: 20px;          /* arrow size */
+  display: flex;            /* center the arrow */
+  align-items: center;
+  justify-content: center;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: lightgrey;
   color: red;
   cursor: pointer;
   z-index: 1000;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
   opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
 .scrollBtn:hover {
@@ -84,8 +116,13 @@ button:hover {
   transform: scale(1.1);
 }
 
-#scrollTopBtn { bottom: 100px; }
-#scrollBottomBtn { bottom: 20px; }
+#scrollTopBtn {
+  bottom: 60px;   /* slightly above bottom button */
+}
+
+#scrollBottomBtn {
+  bottom: 10px;   /* very bottom */
+}
 
 /* ---------- ANIMAL MODAL ------------*/
 .modal {
@@ -102,13 +139,14 @@ button:hover {
 }
 
 .modal img {
-  width: 300px;
+  width: 80%;         /* scales with screen */
+  max-width: 300px;   /* won’t get too big */
   border-radius: 15px;
 }
 
 .modal p {
   color: white;
-  font-size: 20px;
+  font-size: 1.2em;
   margin-top: 15px;
 }
 
@@ -134,16 +172,17 @@ button:hover {
 }
 
 #shapeDisplay img {
-  width: 200px;
-  height: 200px;
+  width: 60%;        /* scales naturally */
+  max-width: 200px;
+  height: auto;
   border-radius: 15px;
   border: 3px solid purple;
   margin: 10px;
-  padding: 30px;
+  padding: 10px;
 }
 
 #shapeDisplay p {
-  font-size: 20px;
+  font-size: 1.1em;
   color: purple;
   font-weight: bold;
   margin-top: 10px;
@@ -152,7 +191,7 @@ button:hover {
 /* ---------- ALPHABET TOPIC ------------*/
 #alphabetButtons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;     /* wrap to next line if too long */
   justify-content: center;
   gap: 10px;
 }
@@ -161,11 +200,13 @@ button:hover {
   background-color: lightblue;
   color: darkblue;
   font-weight: bold;
-  width: 60px;
-  height: 60px;
+  width: 12%;
+  min-width: 45px;
+  height: 45px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 1em;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .letter:hover {
@@ -177,14 +218,7 @@ button:hover {
   margin-top: 20px;
 }
 
-#description{
-  font-size: 25px;
-}
-.header{
-  border: solid 3px black;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: large;
-  
-
+#description {
+  font-size: 1.3em;
+  line-height: 1.4em;
 }
