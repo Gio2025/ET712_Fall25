@@ -64,7 +64,6 @@ letterButtons.forEach(btn => {
     const word = alphabetWords[letter];
     letterWord.textContent = `${letter} is for ${word}!`;
 
-    // Optional: smooth scroll for alphabet display
     document.getElementById("alphabetDisplay").scrollIntoView({ behavior: "smooth", block: "center" });
   });
 });
@@ -123,7 +122,6 @@ for (let btn of shapeButtons) {
     shapeImg.src = shapePath;
     shapeDesc.textContent = "This is a " + shape + "!";
 
-    //  Smooth scroll to show shape image and text
     document.getElementById("shapeDisplay").scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
@@ -132,15 +130,13 @@ for (let btn of shapeButtons) {
 window.addEventListener("load", function() {
   alert("Welcome to Pre-K! Let's start learning and having fun!");
 });
+
 // --------------------- BACKGROUND COLOR ON SCROLL ---------------------
 window.addEventListener("scroll", () => {
-  // Get scroll position
   const scrollY = window.scrollY;
 
-  // Change background color gradually based on scroll
-  // Example: from light pink to crimson
   if (scrollY < 200) {
-    document.body.style.backgroundColor = "rgb(235, 93, 105)"; // default
+    document.body.style.backgroundColor = "rgb(235, 93, 105)";
   } else if (scrollY >= 200 && scrollY < 400) {
     document.body.style.backgroundColor = "rgb(220, 50, 75)";
   } else if (scrollY >= 400 && scrollY < 600) {
@@ -148,4 +144,20 @@ window.addEventListener("scroll", () => {
   } else {
     document.body.style.backgroundColor = "crimson";
   }
+});
+
+// --------------------- RANDOM COLOR ON MOUSEOUT (WELCOME HEADING) ---------------------
+const header = document.querySelector(".header h1");
+
+// Smooth transition for color fade
+header.style.transition = "background-color 0.5s ease";
+
+header.addEventListener("mouseout", function() {
+  // Generate random RGB color
+  const randomColor = `rgb(${Math.floor(Math.random() * 256)}, 
+                          ${Math.floor(Math.random() * 256)}, 
+                          ${Math.floor(Math.random() * 256)})`;
+
+  // Apply it as the background color
+  header.style.backgroundColor = randomColor;
 });
