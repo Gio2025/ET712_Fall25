@@ -1,5 +1,6 @@
 *{box-sizing: border-box; }
 body{padding: 2rem;}
+img{width: 100%; display: block;}
 .title{text-align: center; color: blueviolet;}
 .author{text-align: right; font-style: italic;}
 #user_email{
@@ -7,7 +8,7 @@ body{padding: 2rem;}
   background-color: aliceblue;
   border-radius: 5px;
 }
-.imgcontainer img{
+.imgcontainer{
   width: 800px;
   margin: 2rem auto;
 }
