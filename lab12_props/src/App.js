@@ -1,7 +1,7 @@
 import './App.css';
 import User from "./comments"
-
 import User_feedback from './User_feedback'
+import Modalwindow from './Modalwindow';
 
 // import images
 import avatar1 from './images/avatar_batman.png'
@@ -25,6 +25,7 @@ function App() {
         <User_feedback username= "Peter"><User image = {avatar3}  date="12/13/2024" msg= "I need help"/></User_feedback>
       </section>
 
+      
     </>
   );
 }

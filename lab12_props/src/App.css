@@ -66,3 +66,50 @@ img{width: 100%; display: block;}
   font-weight: bolder;
   padding: 1rem;
 }
+
+/* Modalwindow.js */
+.modalWindow{
+  background-color: rgba(50, 50, 50, 0.5);
+  position: fixed;
+  top: 0%; bottom: 0%; left: 0%; right: 0%;
+  display: none;
+}
+.modalContent{
+  background-color: whitesmoke;
+  width: 500px;
+  margin: 100px auto;
+}
+.modalHeader{
+  border-bottom: ridge 1px lightblue;
+  display: flex;
+}
+.modalHeader p:nth-child(1){
+  font-size: 1.2rem;
+  text-align: center;
+  width: 80%;
+}
+.closeModal{
+  margin-left: auto;
+  padding-right: 2rem;
+  color: lightgreen;
+}
+.commentArea{
+  width: 80%;
+  margin: 10%;
+  padding: 0.5rem 1rem;
+}
+.btnpostfeedback{
+  width: 80%;
+  margin: 10%;
+  background-color: lightgreen;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.btnpostfeedback:hover{
+  background-color: crimson;
+}
+.closeModal:hover{
+  color: crimson;
+  cursor: pointer;
+}
