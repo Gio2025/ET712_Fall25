@@ -25,7 +25,15 @@ function App() {
         <User_feedback username= "Peter"><User image = {avatar3}  date="12/13/2024" msg= "I need help"/></User_feedback>
       </section>
 
-      
+      {/** COMMENT LIST */}
+      <section className='postcomment'>
+        <ul className='commentlist'>
+          <li>Testing</li>
+        </ul>
+      </section>
+
+
+
     </>
   );
 }

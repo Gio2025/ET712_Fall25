@@ -7,7 +7,12 @@ const User_feedback = function(props){
         const openmodalwindow = function(){
             const modalwindow = document.querySelector(".modalWindow")
             modalwindow.style.display ="block"
+
+            // set the username for each user
+            const modalusername = document.querySelector(".modalusername").innerHTML = `<em>${props.username}</em>`
         }
+
+   
 
     return(
         <>
