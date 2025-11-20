@@ -27,8 +27,8 @@ const [isOpen, setisOpen] = useState(false)
 
           
           <div className='btngroup'>
-            <button onClick={function(){if(counter>1)setCounter(counter-1)}}>Previous</button>
-            <button onClick={function(){if(counter<message.length)setCounter(counter+1)}}>Next</button>
+            <button onClick={function(){setCounter(counter === 1 ? message.length : counter - 1)}}>Previous</button>
+            <button onClick={function(){setCounter(counter === message.length ? 1 : counter + 1)}}>Next</button>
           </div>
         </section>
 
