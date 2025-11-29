@@ -1,0 +1,169 @@
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+.apptitle {
+    text-align: center;
+    margin-top: 1rem;
+    color: darkgreen;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* NAV BAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: darkgreen;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* PRODUCT LIST */
+.producttitle {
+    text-align: center;
+    color: darkgreen;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+.cardcontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.card {
+    border: solid gray 1px;
+    width: 220px;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.productname {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.productname s {
+    margin-left: 0.2rem;
+    color: darkgray;
+}
+
+.productname span {
+    font-size: 1.5rem;
+    color: crimson;
+    margin-left: 0.2rem;
+}
+
+/* BUTTON FIX — ensures all buttons look identical */
+.btn_addcart {
+    width: 100%;
+    border: none;
+    background-color: darkgreen;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.8rem;
+    transition: 0.2s;
+}
+
+.btn_addcart:hover {
+    cursor: pointer;
+    background-color: crimson;
+    box-shadow: 0px 0px 4px 1px gray;
+}
+
+/* CART PAGE */
+.carttitle {
+    text-align: center;
+    color: darkgreen;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+.cartcontainer {
+    width: 1000px;
+    margin: 2rem auto;
+    border: solid 1px gray;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.emptymsg {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+}
+
+.itemcart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.cartitemimg {
+    width: 10%;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.cartitemname {
+    width: 20%;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.cartitemprice,
+.cartitemquantity,
+.cartitemtotal {
+    width: 20%;
+    padding: 0.5rem;
+}
+
+.btncartremove {
+    color: crimson;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btncartremove:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.totalcart {
+    border-top: solid gray 1px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1rem 0rem;
+    text-align: right;
+    margin-top: 1rem;
+}
