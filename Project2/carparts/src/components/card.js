@@ -1,16 +1,15 @@
 import React from "react";
-import '../App.css';
+import "../App.css";
 
-const Card = ({ item, addToCart, cartItems }) => {
-  const count = cartItems[item.name]?.qty || 0;
-
+const Card = ({ title, image, price, description, addToCart, qty }) => {
   return (
-    <div className="productCard">
-      <img className="productImg" src={item.image} alt={item.name} />
-      <h3>{item.name}</h3>
-      <p>${item.price}</p>
-      <button className="addBtn" onClick={() => addToCart(item)}>
-        Add to Cart {count > 0 && `(${count})`}
+    <div className="card">
+      <img src={image} alt={title} className="card-image" />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <p>${price}</p>
+      <button onClick={() => addToCart({ title, image, price, description })}>
+        Add to Cart {qty > 0 ? `(${qty})` : ""}
       </button>
     </div>
   );

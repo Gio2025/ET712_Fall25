@@ -1,47 +1,50 @@
-import './App.css';
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar";
-import Homepage from "./components/homepage";
+import Home from "./components/home";
 import Interior from "./components/interior";
 import Exterior from "./components/exterior";
 import Mechanical from "./components/mechanical";
 import Cart from "./components/cart";
 
+import "./App.css";
+
 function App() {
-  const [cartItems, setCartItems] = useState({});
+  const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    setCartItems(prev => {
-      const prevQty = prev[item.name]?.qty || 0;
-      return {
-        ...prev,
-        [item.name]: { ...item, qty: prevQty + 1 }
-      };
-    });
+    // Check if item is already in cart
+    const existing = cart.find((i) => i.title === item.title);
+    if (existing) {
+      setCart(
+        cart.map((i) =>
+          i.title === item.title ? { ...i, qty: i.qty + 1 } : i
+        )
+      );
+    } else {
+      setCart([...cart, { ...item, qty: 1 }]);
+    }
   };
 
-  const removeFromCart = (itemName) => {
-    setCartItems(prev => {
-      const newCart = { ...prev };
-      delete newCart[itemName];
-      return newCart;
-    });
+  const removeFromCart = (title) => {
+    setCart(cart.filter((i) => i.title !== title));
   };
 
   return (
-    <>
-      <BrowserRouter>
-        <Navbar cartCount={Object.keys(cartItems).length} />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/interior" element={<Interior addToCart={addToCart} cartItems={cartItems} />} />
-          <Route path="/exterior" element={<Exterior addToCart={addToCart} cartItems={cartItems} />} />
-          <Route path="/mechanical" element={<Mechanical addToCart={addToCart} cartItems={cartItems} />} />
-          <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <Router>
+      <Navbar cart={cart} />
+      <Routes>
+        <Route path="/" element={<Home addToCart={addToCart} cart={cart} />} />
+        <Route path="/interior" element={<Interior addToCart={addToCart} cart={cart} />} />
+        <Route path="/exterior" element={<Exterior addToCart={addToCart} cart={cart} />} />
+        <Route path="/mechanical" element={<Mechanical addToCart={addToCart} cart={cart} />} />
+        <Route
+          path="/cart"
+          element={<Cart cart={cart} removeFromCart={removeFromCart} />}
+        />
+      </Routes>
+    </Router>
   );
 }
 

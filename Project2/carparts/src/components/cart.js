@@ -1,33 +1,25 @@
 import React from "react";
-import '../App.css';
+import "../App.css";
 
-const Cart = ({ cartItems, removeFromCart }) => {
-  const subtotal = Object.values(cartItems).reduce((sum, item) => sum + item.price * item.qty, 0);
-  const tax = subtotal * 0.0816;
-  const total = subtotal + tax;
+const Cart = ({ cart, removeFromCart }) => {
+  const totalPrice = cart.reduce((acc, item) => acc + item.qty * item.price, 0);
 
   return (
-    <div className="cartPage">
-      <h2>Shopping Cart</h2>
-      {Object.keys(cartItems).length === 0 && <p>Your cart is empty.</p>}
-      {Object.values(cartItems).map(item => (
-        <div className="cartItem" key={item.name}>
-          <img className="cartImg" src={item.image} alt={item.name} />
+    <div className="cartpage">
+      <h1>Your Cart</h1>
+      {cart.length === 0 && <p>Your cart is empty</p>}
+      {cart.map((item) => (
+        <div key={item.title} className="cartitem">
+          <img src={item.image} alt={item.title} className="cartitem-image" />
           <div>
-            <h4>{item.name}</h4>
+            <h3>{item.title}</h3>
+            <p>Price: ${item.price}</p>
             <p>Quantity: {item.qty}</p>
-            <p>Price: ${item.price * item.qty}</p>
-            <button onClick={() => removeFromCart(item.name)}>Remove</button>
+            <button onClick={() => removeFromCart(item.title)}>Remove</button>
           </div>
         </div>
       ))}
-      {Object.keys(cartItems).length > 0 && (
-        <div className="cartTotals">
-          <p>Subtotal: ${subtotal.toFixed(2)}</p>
-          <p>NY Sales Tax (8.16%): ${tax.toFixed(2)}</p>
-          <p>Total: ${total.toFixed(2)}</p>
-        </div>
-      )}
+      {cart.length > 0 && <h2>Total: ${totalPrice}</h2>}
     </div>
   );
 };

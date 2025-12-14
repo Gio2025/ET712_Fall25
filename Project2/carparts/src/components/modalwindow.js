@@ -1,27 +1,18 @@
 import React from "react";
 import "../App.css";
 
-const Modalwindow = function () {
-  const closemodalwindow = () => {
-    document.querySelector(".modalWindow").style.display = "none";
-  };
+const Modalwindow = ({ show, close, title, image, description }) => {
+  if (!show) return null;
 
   return (
-    <>
-      <section className="modalWindow">
-        <div className="modalContent">
-          <header className="modalHeader">
-            <h2 className="modalTitle"></h2>
-            <p className="closeModal" onClick={closemodalwindow}>✖</p>
-          </header>
-
-          <main className="modalBody">
-            <img className="modalImg" />
-            <p className="modalDesc"></p>
-          </main>
-        </div>
-      </section>
-    </>
+    <div className="modaloverlay">
+      <div className="modalcontent">
+        <h2>{title}</h2>
+        <img src={image} alt={title} />
+        <p>{description}</p>
+        <button onClick={close}>Close</button>
+      </div>
+    </div>
   );
 };
 
