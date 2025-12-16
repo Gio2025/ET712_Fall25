@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./card";
+
 import seat from "../images/seat.jpg";
 import radio from "../images/radio.jpg";
 import floormat from "../images/floormat.jpg";
@@ -10,32 +11,23 @@ import brakepad from "../images/brakepad.jpg";
 import engine from "../images/engine.jpg";
 import transmission from "../images/transmission.jpg";
 
-const Home = function () {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (item, qty) => {
-    setCart([...cart, { ...item, qty }]);
-  };
-
+const Home = ({ addToCart, cart }) => {
   return (
     <div className="productpage">
       <h1>Featured Car Parts</h1>
 
       <div className="productgrid">
-        {/* Interior */}
-        <Card title="Leather Seat" image={seat} price="199" description="Premium leather seat" addToCart={addToCart} />
-        <Card title="Bluetooth Radio" image={radio} price="99" description="High-quality radio" addToCart={addToCart} />
-        <Card title="Rubber Floor Mat" image={floormat} price="49" description="All-weather mat" addToCart={addToCart} />
+        <Card title="Leather Seat" image={seat} price={199} description="Premium leather seat" addToCart={addToCart} showAddToCart={false} />
+        <Card title="Bluetooth Radio" image={radio} price={99} description="High-quality radio" addToCart={addToCart} showAddToCart={false} />
+        <Card title="Rubber Floor Mat" image={floormat} price={49} description="All-weather mat" addToCart={addToCart} showAddToCart={false} />
 
-        {/* Exterior */}
-        <Card title="LED Headlight" image={headlight} price="150" description="Bright LED headlight" addToCart={addToCart} />
-        <Card title="Red Taillight" image={taillight} price="80" description="Standard taillight" addToCart={addToCart} />
-        <Card title="All-Season Tire" image={tire} price="200" description="Durable tire" addToCart={addToCart} />
+        <Card title="LED Headlight" image={headlight} price={150} description="Bright LED headlight" addToCart={addToCart} showAddToCart={false} />
+        <Card title="Red Taillight" image={taillight} price={80} description="Standard taillight" addToCart={addToCart} showAddToCart={false} />
+        <Card title="All-Season Tire" image={tire} price={200} description="Durable tire" addToCart={addToCart} showAddToCart={false} />
 
-        {/* Mechanical */}
-        <Card title="Standard Brake Pad" image={brakepad} price="60" description="Reliable braking" addToCart={addToCart} />
-        <Card title="V6 Engine" image={engine} price="1500" description="Powerful engine" addToCart={addToCart} />
-        <Card title="Manual Transmission" image={transmission} price="800" description="Classic manual gearbox" addToCart={addToCart} />
+        <Card title="Standard Brake Pad" image={brakepad} price={60} description="Reliable braking" addToCart={addToCart} showAddToCart={false} />
+        <Card title="V6 Engine" image={engine} price={1500} description="Powerful engine" addToCart={addToCart} showAddToCart={false} />
+        <Card title="Manual Transmission" image={transmission} price={800} description="Classic manual gearbox" addToCart={addToCart} showAddToCart={false} />
       </div>
     </div>
   );
